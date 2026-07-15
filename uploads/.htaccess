@@ -1,0 +1,6 @@
+# Uploaded files are never executable, no matter what extension they get.
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phar|pl|py|cgi|asp|aspx|sh|exe)$">
+  Require all denied
+</FilesMatch>
+php_flag engine off
+Options -Indexes -ExecCGI
